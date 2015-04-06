@@ -9,7 +9,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
         return -1;
     }
 
-    DrawPixel(320, 240, 0xffff);
+    int graph = LoadGraph("Graph/Gyazo.png");
+
+    DrawGraph(0, 0, graph, false);
+
+    DeleteGraph(graph);
 
     WaitKey();
 
